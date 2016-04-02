@@ -25,4 +25,8 @@ else
     
     # For now, need to patch the TrigDecisionTool lib flags
     patch -p0 < patches/TrigDecisionTool.patch
+
+    # Prune out all of the SVN meta-data.
+    cd AnalysisBase
+    rm -rf $(find . -name .svn)
 fi
