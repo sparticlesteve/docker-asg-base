@@ -11,6 +11,9 @@ source scripts/config.sh
 # Checkout the packages
 ./scripts/checkoutPackages.sh
 
+# Pull the latest base image
+sudo docker pull sfarrell/ubuntu-root:gcc49-root60412
+
 echo "Building docker image..."
 sudo docker build -t $DOCKER_TARGET_IMAGE .
 
